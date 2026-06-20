@@ -1,0 +1,75 @@
+/* ============================================
+   CreatorsX 2.0 — CSS Design Tokens
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@300;400;500;600;700;900&display=swap');
+
+:root {
+  /* Brand Colors — from CreatorsX logo */
+  --color-green: #208434;
+  --color-red: #da3019;
+  --color-crimson: #b3081d;
+  --color-gold: #f49d00;
+
+  /* Background Surfaces */
+  --color-bg-primary: #111111;      /* near-black — main page bg */
+  --color-bg-secondary: #1A1A1A;    /* near-black — alternating sections */
+  --color-bg-card: #222222;         /* dark card backgrounds */
+  --color-bg-light: #F5F0E8;        /* off-white — light contrast sections */
+
+  /* Text Colors */
+  --color-white: #FFFFFF;
+  --color-offwhite: #F5F0E8;
+  --color-text-primary: #FFFFFF;
+  --color-text-dark: #1A1A1A;
+  --color-text-muted: #8fa88a;
+
+  /* Borders */
+  --color-border-green: rgba(32, 132, 52, 0.3);
+  --color-border-gold: rgba(244, 157, 0, 0.3);
+
+  /* Typography */
+  --font-display: 'Anton', sans-serif;
+  --font-body: 'Poppins', sans-serif;
+
+  /* Spacing & Sizing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+  --spacing-2xl: 4rem;
+
+  /* Borders & Radius */
+  --radius: 4px;
+  --radius-card: 12px;
+  --radius-pill: 99px;
+
+  /* Layout */
+  --max-width: 1200px;
+  --max-width-narrow: 900px;
+  --max-width-compact: 700px;
+
+  /* Breakpoints */
+  --bp-mobile: 480px;
+  --bp-tablet: 768px;
+  --bp-desktop: 1024px;
+  --bp-wide: 1280px;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.15);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.2);
+
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-base: 300ms ease;
+  --transition-slow: 500ms ease;
+}
+
+/* Light mode overrides (if needed in future) */
+@media (prefers-color-scheme: light) {
+  :root {
+    /* Colors remain the same — site is designed for dark mode */
+  }
+}
