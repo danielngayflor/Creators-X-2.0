@@ -4,21 +4,27 @@ import '../styles/pages/home.css';
 /* ── Schedule Data ── */
 const schedule = {
   'DAY 1': [
-    { title: 'Keynote Addresses', desc: 'Leading voices setting the tone on the state and future of Liberia\'s creative economy.' },
-    { title: 'Panel Discussions', desc: 'Practitioners and entrepreneurs tackling the real questions facing Liberia\'s creative community.' },
-    { title: 'Networking Breaks', desc: 'Structured time to connect with fellow creatives, collaborators, and industry professionals.' },
-    { title: 'Performances & Exhibitions', desc: 'Live showcases celebrating the depth of Liberian creative talent — music, spoken word, and more.' },
+    { time: 'TBA', title: 'Keynote Addresses', tags: ['KEYNOTE'] },
+    { time: 'TBA', title: 'Panel Discussions', tags: ['PANEL'] },
+    { time: 'TBA', title: 'Networking Breaks', tags: ['NETWORKING'] },
+    { time: 'TBA', title: 'Performances & Exhibitions', tags: ['PERFORMANCE'] },
   ],
   'DAY 2': [
-    { title: 'Workshops', desc: 'Hands-on skill-building sessions — from content creation to monetisation, led by industry experts.' },
-    { title: 'Focus Group Discussions', desc: 'Intimate conversations to go deeper, share experience, and shape the future of the creative industry.' },
-    { title: 'Fireside Chats', desc: 'Candid, unscripted conversations with creators who have built something real.' },
-    { title: 'Creative Job Fair', desc: 'Connect directly with organisations looking to hire designers, filmmakers, photographers, and creators.' },
+    { time: 'TBA', title: 'Workshops', tags: ['WORKSHOP'] },
+    { time: 'TBA', title: 'Focus Group Discussions', tags: ['FOCUS GROUP'] },
+    { time: 'TBA', title: 'Fireside Chats', tags: ['FIRESIDE'] },
+    { time: 'TBA', title: 'Creative Job Fair', tags: ['JOB FAIR'] },
   ],
   'DAY 3': [
-    { title: 'Visual Art Gallery', desc: 'A showcase of paintings, photography, and digital art by Liberian artists — open to the public.' },
-    { title: 'Creators Discount Market', desc: 'Shop handmade goods, creative products, and merchandise directly from Liberian creators.' },
+    { time: 'TBA', title: 'Visual Art Gallery', tags: ['GALLERY'] },
+    { time: 'TBA', title: 'Creators Discount Market', tags: ['MARKET'] },
   ],
+};
+
+const tagColors = {
+  KEYNOTE: '#da3019', PANEL: '#b3081d', NETWORKING: '#444',
+  PERFORMANCE: '#da3019', WORKSHOP: '#da3019', 'FOCUS GROUP': '#f49d00',
+  FIRESIDE: '#b3081d', 'JOB FAIR': '#b3081d', GALLERY: '#b3081d', MARKET: '#f49d00',
 };
 
 
@@ -251,8 +257,15 @@ export default function Home() {
           <div className="schedule-list">
             {schedule[activeDay].map((item, i) => (
               <div key={i} className="schedule-item">
+                <div className="schedule-time">{item.time}</div>
                 <div className="schedule-title">{item.title}</div>
-                <div className="schedule-desc">{item.desc}</div>
+                <div className="schedule-tags">
+                  {item.tags.map(tag => (
+                    <span key={tag} className="schedule-tag" style={{ backgroundColor: tagColors[tag] || '#333' }}>
+                      {tag}
+                    </span>
+                  ))}
+                </div>
               </div>
             ))}
           </div>
