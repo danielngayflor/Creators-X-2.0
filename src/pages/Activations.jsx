@@ -14,10 +14,10 @@ const activations = [
   },
   {
     num: '02',
-    name: 'The X Awards — Night of Excellence',
+    name: 'Creative Economy Manifesto',
     poweredBy: null,
-    desc: 'Liberia\'s creative industry awards ceremony. Recognising the best across music, film, fashion, photography, design, content creation, and more. Nominated by the community. Celebrated by the community.',
-    format: 'Awards night · Evening of Day 2',
+    desc: 'A community-driven session where Liberia\'s creatives come together to define the future of the creative economy. Shared values, collective commitments, and a declaration for what comes next.',
+    format: 'Community session · Day 2',
     icon: null,
     bg: '#1A1A1A',
     img: 'MTN-50.jpg',

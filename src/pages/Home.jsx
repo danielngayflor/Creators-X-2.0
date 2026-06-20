@@ -4,39 +4,30 @@ import '../styles/pages/home.css';
 /* ── Schedule Data ── */
 const schedule = {
   'DAY 1': [
-    { time: '9:00 AM', title: 'Registration & Welcome', tags: ['OPENING'] },
-    { time: '10:00 AM', title: 'Opening Keynote: The State of Liberia\'s Creative Economy', tags: ['KEYNOTE'] },
-    { time: '11:30 AM', title: 'Panel: From Passion to Profession', tags: ['PANEL'] },
-    { time: '1:00 PM', title: 'Lunch & Creators Discount Market Opens', tags: ['MARKET'] },
-    { time: '2:30 PM', title: 'Creative Job Fair & Internship Board Opens', tags: ['JOB FAIR'] },
-    { time: '3:30 PM', title: 'Live Podcast Studio: Session 1', tags: ['PODCAST'] },
-    { time: '4:30 PM', title: 'Hackathon Kickoff — The 48-Hour Sprint', tags: ['HACKATHON'] },
-    { time: '6:00 PM', title: 'Networking & Close of Day 1', tags: ['NETWORKING'] },
+    { time: 'TBA', title: 'Keynote Address', tags: ['KEYNOTE'] },
+    { time: 'TBA', title: 'Keynote Address', tags: ['KEYNOTE'] },
+    { time: 'TBA', title: 'Panel Discussion', tags: ['PANEL'] },
+    { time: 'TBA', title: 'Panel Discussion', tags: ['PANEL'] },
+    { time: 'TBA', title: 'Networking Break', tags: ['NETWORKING'] },
+    { time: 'TBA', title: 'Performances & Exhibitions', tags: ['PERFORMANCE'] },
   ],
   'DAY 2': [
-    { time: '9:00 AM', title: 'Doors Open — Visual Art Gallery Opens', tags: ['GALLERY'] },
-    { time: '10:00 AM', title: 'Panel: Building Creative Businesses in West Africa', tags: ['PANEL'] },
-    { time: '11:30 AM', title: 'Workshop: Monetising Your Creative Work', tags: ['WORKSHOP'] },
-    { time: '1:00 PM', title: 'Lunch & Creators Market Continues', tags: ['MARKET'] },
-    { time: '2:30 PM', title: 'Live Podcast Studio: Session 2', tags: ['PODCAST'] },
-    { time: '3:30 PM', title: 'Creative Industry Manifesto — Community Session', tags: ['MANIFESTO'] },
-    { time: '5:00 PM', title: 'Hackathon Final Presentations', tags: ['HACKATHON'] },
-    { time: '7:00 PM', title: 'The X Awards — Night of Excellence', tags: ['AWARDS'] },
+    { time: 'TBA', title: 'Workshop', tags: ['WORKSHOP'] },
+    { time: 'TBA', title: 'Workshop', tags: ['WORKSHOP'] },
+    { time: 'TBA', title: 'Focus Group Discussion', tags: ['FOCUS GROUP'] },
+    { time: 'TBA', title: 'Fireside Chat', tags: ['KEYNOTE'] },
+    { time: 'TBA', title: 'Creative Job Fair', tags: ['JOB FAIR'] },
   ],
   'DAY 3': [
-    { time: '10:00 AM', title: 'X Awards Winner Celebration & Gallery Closing', tags: ['GALLERY'] },
-    { time: '11:00 AM', title: 'Fireside Chat: Liberia\'s Next Creative Decade', tags: ['KEYNOTE'] },
-    { time: '12:30 PM', title: 'Final Panel: What Comes After CreatorsX', tags: ['PANEL'] },
-    { time: '2:00 PM', title: 'Community Lunch & Final Networking', tags: ['NETWORKING'] },
-    { time: '3:30 PM', title: 'Closing Ceremony & Next Steps', tags: ['CLOSING'] },
+    { time: 'TBA', title: 'Visual Art Gallery', tags: ['GALLERY'] },
+    { time: 'TBA', title: 'Creators Discount Market', tags: ['MARKET'] },
   ],
 };
 
 const tagColors = {
   KEYNOTE: '#da3019', PANEL: '#b3081d', MARKET: '#f49d00',
-  'JOB FAIR': '#b3081d', PODCAST: '#da3019', HACKATHON: '#f49d00',
-  NETWORKING: '#444', GALLERY: '#b3081d', WORKSHOP: '#da3019',
-  MANIFESTO: '#f49d00', AWARDS: '#f49d00', OPENING: '#da3019', CLOSING: '#b3081d',
+  'JOB FAIR': '#b3081d', NETWORKING: '#444', GALLERY: '#b3081d',
+  WORKSHOP: '#da3019', 'FOCUS GROUP': '#f49d00', PERFORMANCE: '#da3019',
 };
 
 /* ── Speaker Placeholder Data ── */
@@ -241,32 +232,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ══════════════════════════════
-          WHAT'S HAPPENING
-      ══════════════════════════════ */}
-      <section className="activations-preview">
-        <div className="container">
-          <span className="section-label">WHAT'S HAPPENING</span>
-          <h2>What's Happening at 2.0</h2>
-          <div className="activations-grid">
-            {[
-              { name: 'Creators Discount Market', desc: 'Shop directly from Liberian creators' },
-              { name: 'The X Awards', desc: 'Night of Excellence — celebrating the best' },
-              { name: 'Visual Art Gallery', desc: 'Paintings, photography and installations' },
-              { name: 'Live Podcast Studio', desc: 'Record and broadcast live on the floor' },
-              { name: 'Hackathon', desc: 'The 48-Hour creative sprint' },
-              { name: 'Creative Job Fair', desc: 'Creative opportunities and internships' },
-            ].map((a, i) => (
-              <div key={i} className="activation-card">
-                <span className="activation-num">0{i + 1}</span>
-                <h3>{a.name}</h3>
-                <p>{a.desc}</p>
-              </div>
-            ))}
-          </div>
-          <a href="/activations" className="btn btn-primary">See All Activations</a>
-        </div>
-      </section>
 
       {/* ══════════════════════════════
           EVENT SCHEDULE (VidSummit style)
