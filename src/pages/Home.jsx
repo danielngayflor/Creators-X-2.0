@@ -78,7 +78,6 @@ function useCountUp(target, duration = 1500) {
 export default function Home() {
   const [activeDay, setActiveDay] = useState('DAY 1');
   const videoRef = useRef(null);
-  const [muted, setMuted] = useState(true);
   const [creatorsCount, creatorsRef] = useCountUp(150);
   const [speakersCount, speakersRef] = useCountUp(15);
   const [partnersCount, partnersRef] = useCountUp(8);
@@ -95,7 +94,7 @@ export default function Home() {
             ref={videoRef}
             src="/assets/hero-video.mp4"
             autoPlay
-            muted={muted}
+            muted
             loop
             playsInline
             poster="/assets/images/MTN-50.jpg"
