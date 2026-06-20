@@ -21,11 +21,6 @@ const schedule = {
   ],
 };
 
-const tagColors = {
-  KEYNOTE: '#da3019', PANEL: '#b3081d', MARKET: '#f49d00',
-  'JOB FAIR': '#b3081d', NETWORKING: '#444', GALLERY: '#b3081d',
-  WORKSHOP: '#da3019', 'FOCUS GROUP': '#f49d00', PERFORMANCE: '#da3019',
-};
 
 /* ── Speaker Placeholder Data ── */
 const speakers = [
