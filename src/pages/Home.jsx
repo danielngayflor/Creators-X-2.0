@@ -4,20 +4,20 @@ import '../styles/pages/home.css';
 /* ── Schedule Data ── */
 const schedule = {
   'DAY 1': [
-    { time: 'TBA', title: 'Keynote Addresses', tags: ['KEYNOTE'] },
-    { time: 'TBA', title: 'Panel Discussions', tags: ['PANEL'] },
-    { time: 'TBA', title: 'Networking Breaks', tags: ['NETWORKING'] },
-    { time: 'TBA', title: 'Performances & Exhibitions', tags: ['PERFORMANCE'] },
+    { title: 'Keynote Addresses', desc: 'Leading voices setting the tone on the stage', tags: ['KEYNOTE'] },
+    { title: 'Panel Discussions', desc: 'Practitioners, entrepreneurs and authorities tackling the real questions', tags: ['PANEL'] },
+    { title: 'Networking', desc: 'Connect and collaborate with creatives and professionals', tags: ['NETWORKING'] },
+    { title: 'Performances & Exhibitions', desc: 'Live showcases celebrating the depth of Liberian creative talent', tags: ['PERFORMANCE'] },
   ],
   'DAY 2': [
-    { time: 'TBA', title: 'Workshops', tags: ['WORKSHOP'] },
-    { time: 'TBA', title: 'Focus Group Discussions', tags: ['FOCUS GROUP'] },
-    { time: 'TBA', title: 'Fireside Chats', tags: ['FIRESIDE'] },
-    { time: 'TBA', title: 'Creative Job Fair', tags: ['JOB FAIR'] },
+    { title: 'Workshops', desc: 'Hands-on skill-building sessions led by industry experts', tags: ['WORKSHOP'] },
+    { title: 'Focus Group Discussions', desc: 'Intimate conversations to go deeper, share experience, and shape the future of the creative industry', tags: ['FOCUS GROUP'] },
+    { title: 'Fireside Chats', desc: 'Candid, unscripted conversations with creators who have built something real', tags: ['FIRESIDE'] },
+    { title: 'Creative Job Fair', desc: 'Connect directly with organisations looking to hire designers, filmmakers, photographers, and creators', tags: ['JOB FAIR'] },
   ],
   'DAY 3': [
-    { time: 'TBA', title: 'Visual Art Gallery', tags: ['GALLERY'] },
-    { time: 'TBA', title: 'Creators Discount Market', tags: ['MARKET'] },
+    { title: 'Visual Art Gallery', desc: 'A showcase of paintings, photography, and digital art by Liberian artists', tags: ['GALLERY'] },
+    { title: 'Creators Discount Market', desc: 'Shop handmade goods, creative products, and merchandise directly from Liberian creators', tags: ['MARKET'] },
   ],
 };
 
@@ -257,8 +257,10 @@ export default function Home() {
           <div className="schedule-list">
             {schedule[activeDay].map((item, i) => (
               <div key={i} className="schedule-item">
-                <div className="schedule-time">{item.time}</div>
-                <div className="schedule-title">{item.title}</div>
+                <div className="schedule-item-text">
+                  <div className="schedule-title">{item.title}</div>
+                  <div className="schedule-desc">{item.desc}</div>
+                </div>
                 <div className="schedule-tags">
                   {item.tags.map(tag => (
                     <span key={tag} className="schedule-tag" style={{ backgroundColor: tagColors[tag] || '#333' }}>

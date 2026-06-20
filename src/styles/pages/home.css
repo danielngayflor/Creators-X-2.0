@@ -663,9 +663,10 @@
 }
 
 .schedule-item {
-  display: grid;
-  grid-template-columns: 120px 1fr auto;
+  display: flex;
+  flex-direction: row;
   align-items: center;
+  justify-content: space-between;
   gap: var(--spacing-lg);
   background: #1a1a1a;
   border-radius: var(--radius-card);
@@ -675,19 +676,30 @@
 
 .schedule-item:hover { background: #222222; }
 
-.schedule-time {
-  font-family: var(--font-body);
-  font-size: 0.9rem;
-  font-weight: 700;
-  color: var(--color-red);
-  letter-spacing: 0.05em;
+.schedule-item-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  flex: 1;
 }
 
 .schedule-title {
   font-family: var(--font-body);
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--color-white);
+}
+
+.schedule-desc {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.55);
+  margin: 0;
+}
+
+.schedule-tags {
+  flex-shrink: 0;
 }
 
 .schedule-tags {
