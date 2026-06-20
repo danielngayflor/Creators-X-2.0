@@ -670,8 +670,9 @@
   gap: var(--spacing-lg);
   background: #1a1a1a;
   border-radius: var(--radius-card);
-  padding: var(--spacing-lg);
+  padding: var(--spacing-lg) var(--spacing-xl);
   transition: background var(--transition-base);
+  text-align: center;
 }
 
 .schedule-item:hover { background: #222222; }
